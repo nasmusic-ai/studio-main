@@ -1,6 +1,6 @@
-
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Navbar } from "@/components/navbar";
 import { ApplicantDashboard } from "@/components/dashboards/applicant-dashboard";
@@ -9,7 +9,7 @@ import { TreasurerDashboard } from "@/components/dashboards/treasurer-dashboard"
 import { AdminDashboard } from "@/components/dashboards/admin-dashboard";
 import { Role } from "@/lib/mock-data";
 
-export default function DashboardPage() {
+function DashboardContent() {
   const searchParams = useSearchParams();
   const role = (searchParams.get("role") || "applicant") as Role;
 
@@ -35,5 +35,13 @@ export default function DashboardPage() {
         {renderDashboard()}
       </main>
     </div>
+  );
+}
+
+export default function DashboardPage() {
+  return (
+    <Suspense fallback={<div className="p-8">Loading dashboard...</div>}>
+      <DashboardContent />
+    </Suspense>
   );
 }
