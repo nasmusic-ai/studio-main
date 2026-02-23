@@ -1,0 +1,23 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Modern office building in a city",
+      "imageUrl": "https://picsum.photos/seed/bilis1/1200/800",
+      "imageHint": "city building"
+    },
+    {
+      "id": "digital-permit",
+      "description": "A formal government document with seals",
+      "imageUrl": "https://picsum.photos/seed/bilis2/400/600",
+      "imageHint": "official certificate"
+    },
+    {
+      "id": "business-owner",
+      "description": "A happy business owner in the Philippines",
+      "imageUrl": "https://picsum.photos/seed/bilis3/800/600",
+      "imageHint": "business person"
+    }
+  ]
+}
